@@ -16,6 +16,7 @@
 		6D312844264BF5BD00A016C1 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D312843264BF5BD00A016C1 /* PresentationController.swift */; };
 		6D312847264BF5E100A016C1 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D312845264BF5E100A016C1 /* OverlayView.swift */; };
 		6D312848264BF5E100A016C1 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D312846264BF5E100A016C1 /* OverlayView.xib */; };
+		6D31284A264C251500A016C1 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D312849264C251500A016C1 /* UIDevice+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6D312843264BF5BD00A016C1 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		6D312845264BF5E100A016C1 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		6D312846264BF5E100A016C1 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		6D312849264C251500A016C1 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		6D0C35C3264AF5EB00F1DB63 /* new */ = {
 			isa = PBXGroup;
 			children = (
+				6D312849264C251500A016C1 /* UIDevice+Extensions.swift */,
 				6D312842264BF5AB00A016C1 /* group */,
 				6D0C35C4264AF5EB00F1DB63 /* AppDelegate.swift */,
 				6D0C35C6264AF5EB00F1DB63 /* SceneDelegate.swift */,
@@ -160,6 +163,7 @@
 				6D0C35C7264AF5EB00F1DB63 /* SceneDelegate.swift in Sources */,
 				6D312844264BF5BD00A016C1 /* PresentationController.swift in Sources */,
 				6D312847264BF5E100A016C1 /* OverlayView.swift in Sources */,
+				6D31284A264C251500A016C1 /* UIDevice+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

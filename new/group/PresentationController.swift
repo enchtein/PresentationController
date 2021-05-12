@@ -41,20 +41,38 @@ class PresentationController: UIPresentationController {
   
   var state: Bool = false
   var buttonPos: CGRect?
+  var currentDevice = UIDevice().sizeType
   
   override var frameOfPresentedViewInContainerView: CGRect {
 //    CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.4),
 //           size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
 //            0.6))
+    var viewSettings: (originHeight: CGFloat, sizeHeight: CGFloat) = (0.20, 0.80)
+    switch self.currentDevice {
+    case .verySmall4inch:
+      viewSettings = (originHeight: 0.20, sizeHeight: 0.80)
+    case .small47inch:
+      viewSettings = (originHeight: 0.25, sizeHeight: 0.75)
+    case .medium55inch:
+      viewSettings = (originHeight: 0.28, sizeHeight: 0.72)
+    case .large58inch:
+      viewSettings = (originHeight: 0.30, sizeHeight: 0.70)
+    case .xL61inch:
+      viewSettings = (originHeight: 0.40, sizeHeight: 0.60)
+    case .xXL:
+      viewSettings = (originHeight: 0.40, sizeHeight: 0.60)
+    case .mini12:
+      viewSettings = (originHeight: 0.35, sizeHeight: 0.65)
+    }
     if self.state {
-      return CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.20),
+      return CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * viewSettings.originHeight),//0.20
              size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-              0.80))
+                            viewSettings.sizeHeight))//0.80
     } else { // 111
-      let ss = self.containerView!.frame.height - 111
-      return CGRect(origin: CGPoint(x: 0, y: ss),
+      let indent = self.containerView!.frame.height - 111
+      return CGRect(origin: CGPoint(x: 0, y: indent),
              size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-              0.80))
+                            viewSettings.sizeHeight))//0.80
     }
   }
 
