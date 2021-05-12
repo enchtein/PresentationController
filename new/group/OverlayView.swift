@@ -39,6 +39,7 @@ class OverlayView: UIViewController {
   var changeState: ChangeSize?
   var state: Bool = false
   var monthAgo: Date?
+  let dateFormatt = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class OverlayView: UIViewController {
         
 //        slideIdicator.roundCorners(.allCorners, radius: 10)
 //        subscribeButton.roundCorners(.allCorners, radius: 10)
+      self.dateFormatt.dateFormat = "yyyy-MM-dd"
       self.setupStartProperties()
     }
   func setupStartProperties() {
@@ -105,12 +107,13 @@ class OverlayView: UIViewController {
   @IBAction func datePickerAction(_ sender: UIDatePicker) {
     
     if let startDateLabel = self.startDateLabel.text, startDateLabel.elementsEqual("From") {
-      self.startDateLabel.text = sender.date.debugDescription
+      self.startDateLabel.text = "From: "+dateFormatt.string(from: sender.date)
+//      let temp = dateFormatt.string(from: sender.date)
       self.startDateLabel.stopBlink()
       self.datePicker.minimumDate = sender.date
       self.endDateLabel.startBlink()
     } else {
-      self.endDateLabel.text = sender.date.debugDescription
+      self.endDateLabel.text = "To: "+dateFormatt.string(from: sender.date)
       self.endDateLabel.stopBlink()
       self.confirmButtonOutlet.isEnabled = true
       self.confirmButtonOutlet.setTitle("Search", for: .normal)

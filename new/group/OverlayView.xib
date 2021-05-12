@@ -29,17 +29,17 @@
                         <action selector="datePickerAction:" destination="-1" eventType="valueChanged" id="9uq-D6-UWm"/>
                     </connections>
                 </datePicker>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-EB-xBZ">
-                    <rect key="frame" x="20" y="64" width="374" height="20.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-EB-xBZ">
+                    <rect key="frame" x="10" y="64" width="394" height="20.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMr-yO-COR">
-                            <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMr-yO-COR">
+                            <rect key="frame" x="0.0" y="0.0" width="192" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-Nv-yuQ">
-                            <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-Nv-yuQ">
+                            <rect key="frame" x="202" y="0.0" width="192" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -71,10 +71,10 @@
             <constraints>
                 <constraint firstItem="OCM-bx-Sa9" firstAttribute="top" secondItem="dwn-EB-xBZ" secondAttribute="bottom" constant="10" id="3Sk-FQ-GyG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aac-tk-2EI" secondAttribute="trailing" id="4wF-uh-K9q"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwn-EB-xBZ" secondAttribute="trailing" constant="20" id="Ddz-wV-Fcq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwn-EB-xBZ" secondAttribute="trailing" constant="10" id="Ddz-wV-Fcq"/>
                 <constraint firstItem="8Dt-pS-RXE" firstAttribute="top" secondItem="OCM-bx-Sa9" secondAttribute="bottom" constant="10" id="OgV-Vt-zdp"/>
                 <constraint firstItem="OCM-bx-Sa9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PaV-5Y-WVf"/>
-                <constraint firstItem="dwn-EB-xBZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WN9-Hj-qSS"/>
+                <constraint firstItem="dwn-EB-xBZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="WN9-Hj-qSS"/>
                 <constraint firstItem="dwn-EB-xBZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dV6-dI-Kdg"/>
                 <constraint firstItem="aac-tk-2EI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dih-18-N9x"/>
                 <constraint firstItem="8Dt-pS-RXE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eAa-fn-MsX"/>
