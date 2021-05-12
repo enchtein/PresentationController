@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayView" customModule="new" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmButtonOutlet" destination="OCM-bx-Sa9" id="o9V-Wv-cBA"/>
+                <outlet property="datePicker" destination="8Dt-pS-RXE" id="dIH-yK-Lia"/>
+                <outlet property="endDateLabel" destination="nRg-Nv-yuQ" id="nii-Cu-tx0"/>
+                <outlet property="stackView" destination="dwn-EB-xBZ" id="etY-R8-Rr2"/>
+                <outlet property="startDateLabel" destination="HMr-yO-COR" id="af0-DR-XuF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="635"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="8Dt-pS-RXE">
+                    <rect key="frame" x="0.0" y="154.5" width="414" height="386"/>
+                    <connections>
+                        <action selector="datePickerAction:" destination="-1" eventType="valueChanged" id="9uq-D6-UWm"/>
+                    </connections>
+                </datePicker>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dwn-EB-xBZ">
+                    <rect key="frame" x="20" y="64" width="374" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMr-yO-COR">
+                            <rect key="frame" x="0.0" y="0.0" width="177" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-Nv-yuQ">
+                            <rect key="frame" x="197" y="0.0" width="177" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="Bk3-hE-2rp"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-bx-Sa9">
+                    <rect key="frame" x="184" y="94.5" width="46" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SYz-eb-F85"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="2dQ-ja-kVl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select date range" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aac-tk-2EI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OCM-bx-Sa9" firstAttribute="top" secondItem="dwn-EB-xBZ" secondAttribute="bottom" constant="10" id="3Sk-FQ-GyG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aac-tk-2EI" secondAttribute="trailing" id="4wF-uh-K9q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwn-EB-xBZ" secondAttribute="trailing" constant="20" id="Ddz-wV-Fcq"/>
+                <constraint firstItem="8Dt-pS-RXE" firstAttribute="top" secondItem="OCM-bx-Sa9" secondAttribute="bottom" constant="10" id="OgV-Vt-zdp"/>
+                <constraint firstItem="OCM-bx-Sa9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PaV-5Y-WVf"/>
+                <constraint firstItem="dwn-EB-xBZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WN9-Hj-qSS"/>
+                <constraint firstItem="dwn-EB-xBZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dV6-dI-Kdg"/>
+                <constraint firstItem="aac-tk-2EI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dih-18-N9x"/>
+                <constraint firstItem="8Dt-pS-RXE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eAa-fn-MsX"/>
+                <constraint firstItem="aac-tk-2EI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="g94-x0-JGc"/>
+                <constraint firstItem="8Dt-pS-RXE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qlA-BV-LnZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="88" y="132"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
